@@ -106,7 +106,7 @@ public class PersonaH {
         this.fNacimiento = fNacimiento;
     }
     public String imprimir(){
-        return "----------------DATOS PERSONA---------------------" + 
+        return "----------------DATOS PERSONA---------------------" + "\n" +
                 "Id: "+ getIdPersona()+ "\n" + 
                 "Nombres: "+ getNombres()+ "\n" +
                 "Apellidos: "+ getApellidos()+ "\n"+ 

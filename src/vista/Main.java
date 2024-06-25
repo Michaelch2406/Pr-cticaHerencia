@@ -4,6 +4,7 @@
  */
 package vista;
 
+import modelo.Administrativo;
 import modelo.Docente;
 import modelo.Persona;
 
@@ -23,5 +24,8 @@ public class Main {
         d.setEscalaSalarial("A1");
         d.setRegistroSenescyt("1001");
         System.out.println(d.imprimir());
+        
+        Administrativo a=new Administrativo(1, "Secretario", "Software", 3, "Michael", "Chasiguano", "1001657962", 987654133, "michaelchasiguano@gmail.com", "San Francisco", "Masculino", "18 de Enero 2005");
+        System.out.println(a.imprimir());
     }   
 }
