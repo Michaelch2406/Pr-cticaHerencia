@@ -49,7 +49,7 @@ public class Main {
         ca.setSaldo(985746.09);
         ca.determinarCuenta();
         ca.setComisionMensual(0);
-        ca.setTasaAnual(15);
+        ca.setTasaAnual(12);
         ca.setNumeroRetiros(1000);
         ca.setNumeroRetiros(2000);
         ca.setNumeroRetiros(3000);
