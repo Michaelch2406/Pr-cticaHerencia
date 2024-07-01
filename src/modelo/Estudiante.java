@@ -76,6 +76,7 @@ public class Estudiante extends PersonaH{
                 "Fecha Nacimiento: "+ getfNacimiento() + "\n" +
                 "----------------DATOS ESTUDIANTE-----------------"+"\n"+ 
                 "Id: "+ getIdEstudiante()+ "\n"+ 
-                "Número de Matrícula: "+ getNumeroMatricula()+ "\n"+ "Horario: "+ getHorario()+ "\n"+ "Jornada: "+ getJornada();
+                "Número de Matrícula: "+ getNumeroMatricula()+ "\n"+ 
+                "Horario: "+ getHorario()+ "\n"+ "Jornada: "+ getJornada();
     }
 }
