@@ -110,5 +110,13 @@ public class Cuenta {
         setSaldo(getSaldo() - getComisionMensual());
         calcularInteresMensual();
     }
-    
+    public double interesMensual(){
+        double valorRendimiento=0;
+        valorRendimiento=(getSaldo()*((getTasaAnual()/100)/12));
+        return valorRendimiento;  
+    }
+    public void extractoMensual1(){
+        double interes=this.interesMensual();
+        setSaldo(getSaldo()-getComisionMensual()+interes);
+    }
 }
