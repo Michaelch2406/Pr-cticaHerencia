@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/Cuenta.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/CuentaAhorros.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/Estudiante.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/Docente.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/CuentaCorriente.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/Administrativo.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/vista/Main.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/PersonaH.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductosFrescos.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/Producto.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductoCongeladoPorAire.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductoCongeladoPorNitrogeno.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductosRefrigerados.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/vista/mainAgroalimentaria.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductosCongelados.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/HumanosHerencia/src/modelo/ProductoCongeladoPorAgua.java</file>
         </group>
     </open-files>
 </project-private>

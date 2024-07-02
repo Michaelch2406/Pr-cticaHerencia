@@ -21,14 +21,12 @@ public class mainAgroalimentaria {
         pF.imprimir();
         System.out.println();
 
-        // Productos Refrigerados
         ProductosRefrigerados pR = new ProductosRefrigerados("2024-01-01", 
                 "67890", "A123", "2023-06-15", "-5°C", "Chile");
         System.out.println("Producto Refrigerado:");
         pR.imprimir();
         System.out.println();
 
-        // Productos Congelados por Aire
         ProductoCongeladoPorAire pCAr = new ProductoCongeladoPorAire("2025-12-31", 
                 "54321", "2023-06-15", "Perú", "-18°C", 
                 78.0, 21.0, 0.03, 0.97);
@@ -36,14 +34,12 @@ public class mainAgroalimentaria {
         pCAr.imprimir();
         System.out.println();
 
-        // Productos Congelados por Agua
         ProductoCongeladoPorAgua pCAg= new ProductoCongeladoPorAgua("2025-12-31", 
                 "09876", "2023-06-15", "Argentina", "-18°C", 3.5);
         System.out.println("Producto Congelado por Agua:");
         pCAg.imprimir();
         System.out.println();
 
-        // Productos Congelados por Nitrógeno
         ProductoCongeladoPorNitrogeno pCN = new ProductoCongeladoPorNitrogeno("2025-12-31", 
                 "11223", "2023-06-15", "Brasil", "-18°C", "Inmersión", 
                 60);
