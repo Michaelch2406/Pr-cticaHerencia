@@ -13,8 +13,8 @@ public class Cuenta {
     private int numeroConsignaciones;
     private int numeroRetiros;
     private double tasaAnual;
-    private double comisionMensual;
-    private double interesMensual;
+    double comisionMensual;
+    double interesMensual;
 
     public Cuenta() {
     }

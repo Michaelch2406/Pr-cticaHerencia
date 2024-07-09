@@ -24,8 +24,8 @@ public class Estudiante extends PersonaH{
         this.jornada = jornada;
     }
 
-    public Estudiante(int idEstudiante, int numeroMatricula, String horario, String jornada, int idPersona, String nombres, String apellidos, String cedula, int telefono, String correoElectronico, String direccion, String sexo, String fNacimiento) {
-        super(idPersona, nombres, apellidos, cedula, telefono, correoElectronico, direccion, sexo, fNacimiento);
+    public Estudiante(int idEstudiante, int numeroMatricula, String horario, String jornada, int idPersona, String nombres, String apellidos, String cedula, String usuario, String clave, String direccion, String correoElectronico, String sexo, String fNacimiento, int telefono) {
+        super(idPersona, nombres, apellidos, cedula, usuario, clave, direccion, correoElectronico, sexo, fNacimiento, telefono);
         this.idEstudiante = idEstudiante;
         this.numeroMatricula = numeroMatricula;
         this.horario = horario;

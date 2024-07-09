@@ -13,25 +13,29 @@ public class PersonaH {
     private String nombres;
     private String apellidos;
     private String cedula;
-    private int telefono;
-    private String correoElectronico;
+    private String usuario;
+    private String clave;
     private String direccion;
+    private String correoElectronico;
     private String sexo;
     private String fNacimiento;
+    private int telefono;
 
     public PersonaH() {
     }
 
-    public PersonaH(int idPersona, String nombres, String apellidos, String cedula, int telefono, String correoElectronico, String direccion, String sexo, String fNacimiento) {
+    public PersonaH(int idPersona, String nombres, String apellidos, String cedula, String usuario, String clave, String direccion, String correoElectronico, String sexo, String fNacimiento, int telefono) {
         this.idPersona = idPersona;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
-        this.telefono = telefono;
-        this.correoElectronico = correoElectronico;
+        this.usuario = usuario;
+        this.clave = clave;
         this.direccion = direccion;
+        this.correoElectronico = correoElectronico;
         this.sexo = sexo;
         this.fNacimiento = fNacimiento;
+        this.telefono = telefono;
     }
 
     public int getIdPersona() {
@@ -105,6 +109,23 @@ public class PersonaH {
     public void setfNacimiento(String fNacimiento) {
         this.fNacimiento = fNacimiento;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+    
     public String imprimir(){
         return "----------------DATOS PERSONA---------------------" + "\n" +
                 "Id: "+ getIdPersona()+ "\n" + 
@@ -114,6 +135,8 @@ public class PersonaH {
                 "Teléfono: "+ getTelefono() + "\n" +
                 "Correo Electrónico: "+ getCorreoElectronico()+ "\n"+ 
                 "Dirección: "+ getDireccion()+ "\n"+ 
+                "Usuario: "+ getUsuario() + "\n"+ 
+                "Clave: "+ "*************" + "\n"+ 
                 "Sexo: "+ getSexo()+ "\n"+ 
                 "Fecha Nacimiento: "+ getfNacimiento();
     }

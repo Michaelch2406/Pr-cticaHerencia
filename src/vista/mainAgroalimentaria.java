@@ -46,6 +46,5 @@ public class mainAgroalimentaria {
         System.out.println("Producto Congelado por Nitrógeno:");
         pCN.imprimir();
         System.out.println();
-
     }
 }

@@ -26,14 +26,7 @@ public class Docente extends PersonaH{
         this.escalaSalarial = escalaSalarial;
     }
     //CONSTRUCTOR SUPERCLASE
-    public Docente(int idDocente, String Especialidad, String titulo, String registroSenescyt, String escalaSalarial, int idPersona, String nombres, String apellidos, String cedula, int telefono, String correoElectronico, String direccion, String sexo, String fNacimiento) {
-        super(idPersona, nombres, apellidos, cedula, telefono, correoElectronico, direccion, sexo, fNacimiento);
-        this.idDocente = idDocente;
-        this.Especialidad = Especialidad;
-        this.titulo = titulo;
-        this.registroSenescyt = registroSenescyt;
-        this.escalaSalarial = escalaSalarial;
-    }
+
 
     public int getIdDocente() {
         return idDocente;

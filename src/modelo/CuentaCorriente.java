@@ -11,7 +11,7 @@ package modelo;
 public class CuentaCorriente extends Cuenta{
     private double sobregiro;
 
-    public CuentaCorriente(double sobregiro, double saldo, int numeroConsignaciones, int numeroRetiros, double tasaAnual, double comisionMensual, double interesMensual) {
+    public CuentaCorriente(int numeroConsignaciones, double sobregiro, int numeroRetiros, int par2, int tasaAnual, double saldo) {
         super(saldo, numeroConsignaciones, numeroRetiros, tasaAnual, comisionMensual, interesMensual);
         this.sobregiro = sobregiro;
     }

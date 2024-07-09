@@ -11,7 +11,7 @@ package modelo;
 public class CuentaAhorros extends Cuenta{
     private boolean cuentaActiva;
 
-    public CuentaAhorros() {
+    public CuentaAhorros(boolean par, double monto, int par1, int par2, int par3, double par4) {
         
     }
 
