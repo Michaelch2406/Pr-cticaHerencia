@@ -10,26 +10,26 @@ package modelo;
  */
 public class Estudiante extends PersonaH{
     private int idEstudiante;
-    private int numeroMatricula;
-    private String horario;
+    private String numeroMatricula;
     private String jornada;
+    private int idPersona;
 
     public Estudiante() {
     }
 
-    public Estudiante(int idEstudiante, int numeroMatricula, String horario, String jornada) {
+    public Estudiante(int idEstudiante, String numeroMatricula, String jornada, int idPersona) {
         this.idEstudiante = idEstudiante;
         this.numeroMatricula = numeroMatricula;
-        this.horario = horario;
         this.jornada = jornada;
+        this.idPersona = idPersona;
     }
 
-    public Estudiante(int idEstudiante, int numeroMatricula, String horario, String jornada, int idPersona, String nombres, String apellidos, String cedula, String usuario, String clave, String direccion, String correoElectronico, String sexo, String fNacimiento, int telefono) {
+    public Estudiante(int idEstudiante, String numeroMatricula, String jornada, int idPersona, String nombres, String apellidos, String cedula, String usuario, String clave, String direccion, String correoElectronico, String sexo, String fNacimiento, int telefono) {
         super(idPersona, nombres, apellidos, cedula, usuario, clave, direccion, correoElectronico, sexo, fNacimiento, telefono);
         this.idEstudiante = idEstudiante;
         this.numeroMatricula = numeroMatricula;
-        this.horario = horario;
         this.jornada = jornada;
+        this.idPersona = idPersona;
     }
 
     public int getIdEstudiante() {
@@ -40,20 +40,12 @@ public class Estudiante extends PersonaH{
         this.idEstudiante = idEstudiante;
     }
 
-    public int getNumeroMatricula() {
+    public String getNumeroMatricula() {
         return numeroMatricula;
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
+    public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
-    }
-
-    public String getHorario() {
-        return horario;
-    }
-
-    public void setHorario(String horario) {
-        this.horario = horario;
     }
 
     public String getJornada() {
@@ -63,6 +55,15 @@ public class Estudiante extends PersonaH{
     public void setJornada(String jornada) {
         this.jornada = jornada;
     }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
         public String imprimir(){
         return "----------------DATOS PERSONA---------------------" + "\n" +
                 "Id: "+ getIdPersona()+ "\n" + 
@@ -77,6 +78,6 @@ public class Estudiante extends PersonaH{
                 "----------------DATOS ESTUDIANTE-----------------"+"\n"+ 
                 "Id: "+ getIdEstudiante()+ "\n"+ 
                 "Número de Matrícula: "+ getNumeroMatricula()+ "\n"+ 
-                "Horario: "+ getHorario()+ "\n"+ "Jornada: "+ getJornada();
+                "Jornada: "+ getJornada();
     }
 }

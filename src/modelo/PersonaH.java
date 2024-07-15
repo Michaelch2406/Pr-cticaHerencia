@@ -78,6 +78,7 @@ public class PersonaH {
         this.telefono = telefono;
     }
 
+
     public String getCorreoElectronico() {
         return correoElectronico;
     }

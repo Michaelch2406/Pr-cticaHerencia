@@ -4,11 +4,13 @@
  */
 package vista;
 
+import controlador.EstudianteControlador;
 import controlador.PersonaHControlador;
 import java.util.ArrayList;
 import java.util.Scanner;
 import modelo.CuentaAhorros;
 import modelo.CuentaCorriente;
+import modelo.Estudiante;
 import modelo.PersonaH;
 
 /**
@@ -61,7 +63,8 @@ public class Main2 {
                 i = 0;
             }else if(op1==6){
                 System.out.println("Elija la transacción a realizar...\n"+ "\n"+ 
-                        "1.Crear Persona");
+                        "1.Crear Persona\n"+ 
+                        "2.Crear Estudiante\n");
                 int mp=es.nextInt();
                 if(mp==1){
                     System.out.println("Ingrese los siguientes datos informativos");
@@ -89,6 +92,86 @@ public class Main2 {
                     //CONTROLADOR
                     PersonaHControlador pc=new PersonaHControlador();
                     pc.crearPersona(p);
+                }else if(mp==2){
+                    System.out.println("Ingrese los siguientes datos personales");
+                    //MODELO
+                    PersonaH p=new PersonaH();
+                    System.out.println("Ingrese su Nombre: ");
+                    p.setNombres(es.next());
+                    System.out.println("Ingrese su Apellidos: ");
+                    p.setApellidos(es.next());
+                    System.out.println("Ingrese el número de cédula: ");
+                    p.setCedula(es.next());
+                    System.out.println("Ingrese su Usuario: ");
+                    p.setUsuario(es.next());
+                    System.out.println("Ingrese su clave: ");
+                    p.setClave(es.next());
+                    System.out.println("Ingrese su Dirección: ");
+                    p.setDireccion(es.next());
+                    System.out.println("Ingrese su correo Electrónico: ");
+                    p.setCorreoElectronico(es.next());
+                    System.out.println("Ingrese si es feminino (F) y si es masculino (M): ");
+                    p.setSexo(es.next());
+                    System.out.println("Ingrese su fecha de nacimiento: ");
+                    p.setfNacimiento(es.next());
+                    System.out.println("Ingrese su teléfono: ");
+                    p.setTelefono(es.nextInt());
+                    //CONTROLADOR
+                    PersonaHControlador pc=new PersonaHControlador();
+                    pc.crearPersona(p);
+                    //OBTENER EL ID DE LA TABLA PERSONA
+                    int idPersona=pc.buscarIdPersona(p.getCedula());
+                    System.out.println("----------------"+idPersona);
+                    //MODELO
+                    Estudiante est=new Estudiante();
+                    System.out.println("Ingrese el número de Matrícula: ");
+                    est.setNumeroMatricula(es.next());
+                    System.out.println("Ingrese su jornada de estudio: ");
+                    est.setJornada(es.next());
+                    est.setIdPersona(idPersona);
+                    
+                    EstudianteControlador estC=new EstudianteControlador();
+                    estC.crearEstudiante(est);
+                }else if(mp==3){
+                    System.out.println("Ingrese los siguientes datos personales");
+                    //MODELO
+                    PersonaH p=new PersonaH();
+                    System.out.println("Ingrese su Nombre: ");
+                    p.setNombres(es.next());
+                    System.out.println("Ingrese su Apellidos: ");
+                    p.setApellidos(es.next());
+                    System.out.println("Ingrese el número de cédula: ");
+                    p.setCedula(es.next());
+                    System.out.println("Ingrese su Usuario: ");
+                    p.setUsuario(es.next());
+                    System.out.println("Ingrese su clave: ");
+                    p.setClave(es.next());
+                    System.out.println("Ingrese su Dirección: ");
+                    p.setDireccion(es.next());
+                    System.out.println("Ingrese su correo Electrónico: ");
+                    p.setCorreoElectronico(es.next());
+                    System.out.println("Ingrese si es feminino (F) y si es masculino (M): ");
+                    p.setSexo(es.next());
+                    System.out.println("Ingrese su fecha de nacimiento: ");
+                    p.setfNacimiento(es.next());
+                    System.out.println("Ingrese su teléfono: ");
+                    p.setTelefono(es.nextInt());
+                    //CONTROLADOR
+                    PersonaHControlador pc=new PersonaHControlador();
+                    pc.crearPersona(p);
+                    //OBTENER EL ID DE LA TABLA PERSONA
+                    int idPersona=pc.buscarIdPersona(p.getCedula());
+                    System.out.println("----------------"+idPersona);
+                    //MODELO
+                    Estudiante est=new Estudiante();
+                    System.out.println("Ingrese el número de Matrícula: ");
+                    est.setNumeroMatricula(es.next());
+                    System.out.println("Ingrese su jornada de estudio: ");
+                    est.setJornada(es.next());
+                    est.setIdPersona(idPersona);
+                    
+                    EstudianteControlador estC=new EstudianteControlador();
+                    estC.crearEstudiante(est);
                 }
             }
 

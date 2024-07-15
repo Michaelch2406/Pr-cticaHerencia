@@ -49,5 +49,21 @@ public class PersonaHControlador {
         
  
     }
+    public int buscarIdPersona(String cedula){
+            try {
+                String consultaSQL="select idpersona from persona where cedula='"+cedula+"';";
+                ejecutar=(PreparedStatement)connection.prepareCall(consultaSQL);
+                resultado=ejecutar.executeQuery();
+                if(resultado.next()){
+                    int idPersona=resultado.getInt("idpersona"); //Lista Estática
+                    return idPersona;
+                }else{
+                    System.out.println("Ingrese una cédula válida");
+                }
+            } catch (Exception e) {
+                System.out.println("Comuníquese con el administrador"+e);
+            }
+            return 0;
+    }
     
 }
