@@ -33,7 +33,7 @@ public class EstudianteControlador {
                 System.out.println("Ingrese datos de manera correcta");
             }
         } catch (Exception e) {
-            System.out.println("Comuníquese con el administrador, gracias!");
+            System.out.println("Comuníquese con el administrador, gracias!"+e);
         }
     }
 }
