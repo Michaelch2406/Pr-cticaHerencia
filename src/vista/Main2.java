@@ -15,6 +15,7 @@ import modelo.CuentaAhorros;
 import modelo.CuentaCorriente;
 import modelo.Docente;
 import modelo.Estudiante;
+import modelo.Persona;
 import modelo.PersonaH;
 
 /**
@@ -70,7 +71,10 @@ public class Main2 {
                         "1.Crear Persona\n"+ 
                         "2.Crear Estudiante\n"+
                         "3.Crear Administrativo\n"+
-                        "4.Crear Docente\n");
+                        "4.Crear Docente\n"+
+                        "5.Mostrar lista de Personas \n"+
+                        "6.Actualizar datos de Personas \n"+
+                        "7.Eliminar Personas \n");
                 int mp=es.nextInt();
                 if(mp==1){
                     System.out.println("Ingrese los siguientes datos informativos");
@@ -122,7 +126,7 @@ public class Main2 {
                     p.setfNacimiento(es.next());
                     System.out.println("Ingrese su teléfono: ");
                     p.setTelefono(es.nextInt());
-                    //CONTROLADOR
+                    //CONTROLADOR                    
                     PersonaHControlador pc=new PersonaHControlador();
                     pc.crearPersona(p);
                     //OBTENER EL ID DE LA TABLA PERSONA
@@ -181,52 +185,32 @@ public class Main2 {
                     AdministrativosControlador adC=new AdministrativosControlador();
                     adC.crearAdministrativo(ad, idPersona);
 
-                }else if(mp==4){
-                    System.out.println("Ingrese los siguientes datos personales");
+                }else if(mp==6){
+                    System.out.println("Ingrese su actual número de cédula");
+                    String cedula=es.next();
+                    PersonaHControlador pc=new PersonaHControlador();
+                    PersonaH p1=pc.buscardatosPersona(cedula);
+                    System.out.println(p1.imprimir());
+                    
+                    System.out.println("Ingrese los siguientes datos a cambiar");
                     //MODELO DE LA SUPER CLASE
                     PersonaH p = new PersonaH();
-
-                    System.out.println("Ingrese su Nombre:");
-                    p.setNombres(es.next());
-                    System.out.println("Ingrese su Apellidos:");
-                    p.setApellidos(es.next());
-                    System.out.println("Ingrese su número de cédula:");
-                    p.setCedula(es.next());
-                    System.out.println("Ingrese un Usuario:");
-                    p.setUsuario(es.next());
-                    System.out.println("Ingrese una Clave:");
-                    p.setClave(es.next());
-                    System.out.println("Ingrese una Dirección:");
-                    p.setDireccion(es.next());
-                    System.out.println("Ingrese su Correo Electrónico:");
-                    p.setCorreoElectronico(es.next());
-                    System.out.println("Ingrese el sexo:");
-                    p.setSexo(es.next());
-                    System.out.println("Ingrese su Fecha de Nacimiento:");
-                    p.setfNacimiento(es.next());
-                    System.out.println("Ingrese un número Telefónico:");
-                    p.setTelefono(es.nextInt());
-                    //CONTROLADOR
-                    PersonaHControlador pc = new PersonaHControlador();
-                    pc.crearPersona(p);
-                    System.out.println("Ingrese los siguientes datos de Docentes");
-                    //OBTENER EL ID DE LA TABLA PERSONAS (SUPER CLASE)
-                   int idPersona=pc.buscarIdPersona(p.getCedula());
-                    System.out.println("-------------------"+idPersona);
-                    //MODELO DE LA SUBCLASE   
-                    Docente d = new Docente();
-                    System.out.println("Ingrese su especialidad:");
-                    d.setEspecialidad(es.next());
-                    System.out.println("Ingrese su Título:");
-                    d.setTitulo(es.next());
-                    System.out.println("Ingrese su registro en la Senescyt:");
-                    d.setRegistroSenescyt(es.next());
-                    System.out.println("Ingrese su escala Salarial:");
-                    d.setEscalaSalarial(es.next());
-                    d.setIdPersona(idPersona);
                     
-                    DocenteControlador dc=new DocenteControlador();
-                    dc.crearDocente(d);
+                    System.out.println("Ingrese su nuevo Nombre:");
+                    p.setNombres(es.next());
+                    System.out.println("Ingrese el nuevo número de cédula:");
+                    p.setCedula(es.next());
+                    
+                    
+                    pc.actualizarPersonas(p, cedula);
+                    //CONTROLADOR
+                    
+                    pc.actualizarPersonas(p, cedula);  
+                }else if(mp==7){
+                    System.out.println("Ingrese el número de cédula de la persona a eliminar:");
+                    String cedula = es.next();
+                    PersonaHControlador pc = new PersonaHControlador();
+                    pc.eliminarPersonas(cedula);
                 }
             }
 
