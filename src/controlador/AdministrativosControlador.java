@@ -27,8 +27,7 @@ public class AdministrativosControlador {
             String consultaSQL="INSERT INTO administrativos (cargo,area,idpersona) VALUES ('"+ad.getCargo()+"','"+ad.getArea()+"',"+idPersona+");";
             PreparedStatement ejecutar=(PreparedStatement)connection.prepareCall(consultaSQL);
             int resultado=ejecutar.executeUpdate();
-            if(resultado>0){
-            
+            if(resultado>0){            
                 System.out.println("El administrativo fue creado con éxito");
             }else{
                 System.out.println("Ingrese los datos de manera correcta");
@@ -36,8 +35,5 @@ public class AdministrativosControlador {
         } catch (Exception e) {
             System.out.println("Comuníquese con el Administrador del Sistema para que resuelva este error"+e);
         }
-
     }
-    
-    
 }
