@@ -36,4 +36,5 @@ public class Producto {
         System.out.println("Fecha de caducidad: " + getFechaCaducidad());
         System.out.println("Número de lote: " + getNumeroLote());
     }
+    
 }
