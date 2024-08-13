@@ -201,7 +201,6 @@ public class Main2 {
                     System.out.println("Ingrese el nuevo número de cédula:");
                     p.setCedula(es.next());
                     
-                    
                     pc.actualizarPersonas(p, cedula);
                     //CONTROLADOR
                     
@@ -213,7 +212,6 @@ public class Main2 {
                     pc.eliminarPersonas(cedula);
                 }
             }
-
         } while (i == 1);
     }
 }
